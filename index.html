@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Images</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Anime</h1>
+  <img id="animeImage" src="https://pic.re/image" alt="Anime image" />
+  <button onclick="changeImage('animeImage', 'https://pic.re/image')">Random Anime</button>
+
+  <h1>Nature</h1>
+  <img id="natureImage" src="https://random-image-pepebigotes.vercel.app/api/random-image" alt="Nature image" />
+  <button onclick="changeImage('natureImage', 'https://random-image-pepebigotes.vercel.app/api/random-image')">Random Nature</button>
+
+  <script>
+    function changeImage(id, baseUrl) {
+      const img = document.getElementById(id);
+      img.src = baseUrl + "?" + new Date().getTime();
+    }
+  </script>
+
+</body>
+</html>
